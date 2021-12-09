@@ -19,19 +19,33 @@ for (let i = 0; i > 5; i++) {
 // nessun errore di sintassi
 // l'errore è che "i" deve essere minore di 5 per far partire l'incremento
 
+// CORREZIONE //
+
+for (let i = 0; i < 5; i++) {
+    console.log(i);
+}
+
 
 // ESERCIZIO 2
 function addIfEven(num) {
-    if (num % 2 == 0) {
+    if (num % 2 = 0) {
         return num + 5;
     }
     return num;
 }
 
 // funzione che aggiunge un parametro "num" solo se pari
-// l'errore di sintassi è l'uguale = (singolo) anzichè == (doppio) oppure === (triplo)
-// aggiungendo 5 non potrà mai essere pari
+// l'errore di sintassi è l'uguale = (singolo) anzichè === (triplo)
+// il secondo return non serve in quanto il numero restituito sarebbe dispari
+// cambierei il nome della funzione 
 
+// CORREZIONE //
+
+function addNumber(num) {
+    if (num % 2 === 0) {
+        return num + 5;
+    }
+}
 
 // ESERCIZIO 3
 function loopToFive() {
@@ -44,6 +58,13 @@ function loopToFive() {
 // errore di sintassi sono le virgole , anzichè i punti e virgola ;
 // nessun errore di logica
 
+// CORREZIONE //
+
+function loopToFive() {
+    for (let i = 0; i < 5; i++) {
+        console.log(i);
+    }
+}
 
 // ESERCIZIO 4 (suggerimento: ci sono 7 errori)
 function displayEvenNumbers() {
@@ -77,3 +98,16 @@ displayEvenNumbers(); // dovrebbe restituire [2,4,6,8]
 
     - "return" alla fine non serve perchè .push() fa già lui il return 
 */ 
+
+// CORREZIONE //
+
+function displayEvenNumbers() {
+    const numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+    let evenNumbers = [];
+    for (let i = 1; i <= numbers.length; i++) {
+        if (numbers % 2 === 0); {
+            evenNumbers.push(i);
+        }
+    }
+}
+displayEvenNumbers();
