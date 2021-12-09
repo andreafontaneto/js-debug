@@ -23,12 +23,20 @@ function checkAge() {
 }
 checkAge();
 
+// funzione per verificare l'età (maggiorenne o minorenne)
+// "message" può variare quindi deve essere un "let"
+// nessun errore logico
+
 // ESERCIZIO 2
 function printColorsNumber() {
     const colors = ['blue', 'red', 'yellow', 'green', 'black'];
     console.log(`Nella mia palette ci sono ${colors.lenght} colori!`);
 }
 printColorsNumber();
+
+// funzione che stampa il numero totale di colori nella palette
+// "colors.length" deve essere salvato in una variabile PRIMA del console.log
+// POI dal console.log tramite `` (template literal) richiamare la nuova variabile
 
 
 // ESERCIZIO 3
@@ -39,6 +47,11 @@ function addNumbers() {
     console.log(`Il risultato finale è ${total}`);
 }
 addNumbers();
+
+// funzione per stampare una somma
+// "userNumber" deve essere uguale a parseInt(prompt('Inserisci un numero'))
+// trasformando così il numero inserito da stringa a numero effettivo
+// nessun errore logico
 
 
 // ESERCIZIO 4
@@ -59,6 +72,12 @@ function checkAccess() {
     }
 }
 checkAccess();
+
+// funzione per permettere l'accesso in base alla mail inserita
+// restituisce "Accesso negato" perchè grantAccess è SEMPRE false 
+// la variabile "grantAccess" è uguale (sia fuori che dentro all'if) ad un stringa 'true','false'
+// e non ad un booleano true/false
+// nessun errore logico
 
 
 // ESERCIZIO 5 (suggerimento: c'è un solo errore)
@@ -88,6 +107,11 @@ function checkAccessImproved() {
     }
 }
 checkAccessImproved();
+
+// funzione per verificare l'accesso in base alla mail inserita
+// nel 1° IF posso scrivere " if (userEmail.length > 5 && email === userEmail)
+// senza fare un 2° IF
+// doppia ripetizione dell'if, per il resto è giusto
 
 
 
